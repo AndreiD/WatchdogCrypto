@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyoccurredorg" lang="en" class="no-js">
+
+<head>
+  <thymeleaf th:replace="/public/base_templates/head :: head"/>
+
+</head>
+
+
+<body onload="getTheStats()">
+<div id="wrap">
+  <div id="main" class="container clear-top">
+    <thymeleaf th:replace="/public/base_templates/navbar :: navbar"/>
+
+    <div class="jumbotron">
+
+
+      <div style="max-width: 55%" id="ajax_response"></div>
+
+      <div class="statistics_response_div" style="font-size: 4.0em">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<thymeleaf th:replace="/public/base_templates/footer :: footer"/>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script language="JavaScript" type="text/javascript" src="/js/main.js"/>
+
+<script language="JavaScript" type="text/javascript">
+  // <![CDATA[
+
+  window.setInterval(function () {
+    this.getTheStats();
+  }, 999000);
+
+  function getTheStats() {
+    jQuery.ajax({
+      url: '/api/get_stats', type: 'GET', cache: false, success: function (data) {
+        if (data) {
+          var keys = Object.keys(data);
+          var output = "<table class=\"table table-hover table-responsive\">";
+
+          for (var j = 0; j < keys.length; j++) {
+            var rigName = keys[j];
+            var tempList = data[rigName]
+
+            output += "<tr><td><span style='font-weight: bold; color:#fafafa'>" + rigName + "</span></td>";
+
+            output = output + "<td>";
+            for (var index = 0, length = tempList.length; index < length; index++) {
+              if (parseInt(tempList[index]) < 50) {
+                output += "<span style='color:#ffff00'>" + tempList[index] + " </span> ";
+              } else if (parseInt(tempList[index]) > 70) {
+                output += "<span style='color:#ff5252'>" + tempList[index] + " </span> ";
+              } else {
+                output += "<span style='color:#b2ff59'>" + tempList[index] + " </span> ";
+              }
+            }
+            output = output + "</td></tr>";
+          }
+          output = output + "</table>";
+
+          $(".statistics_response_div").html(output);
+        }
+      }, error: function (e) {
+        console.log("cannot get the data from the api...");
+      }
+    });
+  }
+  // ]]>
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

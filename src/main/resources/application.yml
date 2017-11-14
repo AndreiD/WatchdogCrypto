@@ -1,0 +1,38 @@
+spring:
+  profiles.active: default
+
+  profiles: default
+  application:
+      name: WatchdogCrypto
+  thymeleaf:
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+    cache: false
+
+  mvc:
+    locale: en_US
+    date-format: dd/MM/yyyy HH:mm:ss
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 1Mb
+      max-request-size: 1Mb
+
+
+server:
+  port: 9999
+  tomcat:
+    max-threads: 3
+    uri-encoding: utf-8
+
+security:
+  basic:
+    enabled: true
+
+
+logging:
+  level:
+    org.springframework.web: INFO
+    springframework.security: DEBUG
+    org.springframework.boot: INFO
