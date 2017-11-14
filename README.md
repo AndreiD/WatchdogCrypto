@@ -40,9 +40,10 @@ ensure you have 1-2GB of RAM available.
 - I get the Permission Denied when I load the server page:
   Make sure you whitelist your IP in SecurityConfig file.
 - I cannot get the client working:
-  Spend some time learning how java and gradle work.
+  Spend some time learning how java and gradle work or give a message here ->
 - I cannot get the server working:
-  Spend some time learning how java, gradle and spring framework work
+  Spend some time learning how java, gradle and spring framework work or give 
+  a message here ->
   
 
 
