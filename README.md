@@ -1,4 +1,4 @@
-# WATCHDOG CRYPTO
+# :fire: WATCHDOG CRYPTO :fire:
 
 Ever wonder if your rigs are working ? Do you have nightmares that they 
 crashed or they run at 80 degrees ? We have a solution for you
@@ -7,13 +7,13 @@ crashed or they run at 80 degrees ? We have a solution for you
  
 This open source solution is providing you with temperature monitoring for your rigs.
  
-### Features
+### :star: Features
  - Open source. You see everything what's inside ;)
  - Written in Java. This means it works both for Windows & Linux
  - Works both for AMD / Nvidia GPUs.
  - Mobile Friendly -> perfect for a tablet / phone (set the font lower/higher) 
 
-### How to build it
+### :point_up: How to build it
 
 - You should have some basic java knowledge and know what gradle is. Without 
 this, it would be very hard
@@ -29,13 +29,13 @@ has java knowledge it will be about 3 min to see everything what's inside.
 ensure you have 1-2GB of RAM available. 
 
  
-### Tips
+### :sunglasses: Tips
  
  You have an old tablet (android) laying around with no use. Now it can be like
  a digital photo frame. Make sure you go into developer mode, check the
  stay awake while charging option, and point it to the server ip. 
 
-### Troubleshooting
+### :rage: Troubleshooting
 
 - I get the Permission Denied when I load the server page:
   Make sure you whitelist your IP in SecurityConfig file.
@@ -47,11 +47,11 @@ ensure you have 1-2GB of RAM available.
   
 
 
-### Need Support ? Addons ? Custom Things ?
+### :sparkling_heart: Need Support ? Addons ? Custom Things ?
 - Give me a private message here ->
 
 
-### License 2017 - present 
+### :notes: License 2017 - present 
 GNU General Public License v3.0
 
 You can read more about this license and what you can do and you cannot
