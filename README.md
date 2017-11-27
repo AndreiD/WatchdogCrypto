@@ -48,7 +48,7 @@ ensure you have 1-2GB of RAM available.
 
 
 ### :sparkling_heart: Need Support ? Addons ? Custom Things ?
-- Give me a private message here ->
+- Give me a message here -> https://goo.gl/forms/A3uDraZ8K1cPwMex2 
 
 
 ### :notes: License 2017 - present 
